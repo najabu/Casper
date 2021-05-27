@@ -839,6 +839,10 @@ make sure this only happens on large viewports / desktop-ish devices.
     margin-right: auto;
     width: 100%;
 }
+/* Added for stp */
+.gh-head {
+    background-color: color-mod(var(--ghost-accent-color));
+}
 
 @media (max-width: 600px) {
     .article-excerpt {

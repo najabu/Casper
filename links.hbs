@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>{{@site.title}}</title>
-    <link rel="stylesheet" href="assets/css/links.css">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../assets/css/links.css">
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon" />
 </head>
 
 <body>
     <i onclick="toggle(this)" class="fa fa-moon-o fa-2x night_mode"></i>
 
-    <a href="http://smashingtheparty.com">
-        <img id="userPhoto" src="assets/images/fist-stp.png" alt="Smashing The Party">
+    <a href="https://smashingtheparty.com">
+        <img id="userPhoto" src="../assets/images/fist-stp.png" alt="Smashing The Party">
     </a>
     <spam id="userName">@smashingtheparty</spam>
     <div class="social">
@@ -41,7 +41,7 @@
     </div>
 
     <div class="footer">
-        {{#get "posts" filter="id:-{{id}}" include="authors" limit="3" as |more_posts|}}
+        {{#get "posts" limit="10" as |more_posts|}}
             {{#if more_posts}}
                 {{#foreach more_posts}}
                     {{> "post-card"}}
@@ -52,7 +52,7 @@
 
     <!-- Javascript -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-    <script type="text/javascript" src="assets/js/links.js"></script>
+    <script type="text/javascript" src="../assets/js/links.js"></script>
 </body>
 
 </html>

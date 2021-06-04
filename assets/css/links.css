@@ -69,8 +69,11 @@ body {
 }
 
 .footer {
-    text-align: center;
-    font-size: 1.3rem;
+    display: grid;
+    grid-template-columns: lfr lfr;
+    margin-top: -40px;
+    /* text-align: center; */
+    /* font-size: 1.3rem; */
 }
 
 .footer a {
@@ -105,4 +108,34 @@ body {
 
 .night_mode:hover {
     cursor: pointer;
+}
+img.grid-card-image {
+    max-width: 80px;
+    max-height: 50px;
+    overflow: hidden; 
+    margin-bottom:-75px;
+}
+.grid-card-header {
+    margin-top: 10px;
+    position: relative;
+    font-family: var(--font);
+    margin-bottom:-40px;
+    margin-right:-40px;
+    margin-left: 100px;
+    max-width: 70%;
+}
+.grid-card-excerpt {
+    display: none;
+    visibility: hidden;
+}
+.grid-card-byline-date {
+    display: none;
+    visibility: hidden;
+}
+h2 {
+    font-size: 15px;
+}
+.grid-card-title {
+    margin-top: 25px;
+    color:rgb(99, 99, 99);
 }

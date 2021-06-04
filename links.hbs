@@ -7,30 +7,36 @@
     <meta charset="UTF-8">
     <title>{{@site.title}}</title>
     <link rel="stylesheet" href="../assets/css/links.css">
-    <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
     <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon" />
+    <script src="https://kit.fontawesome.com/a88bf5e555.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <i onclick="toggle(this)" class="fa fa-moon-o fa-2x night_mode"></i>
 
-    <a href="https://smashingtheparty.com">
+    <a href="http://smashingtheparty.com">
         <img id="userPhoto" src="../assets/images/fist-stp.png" alt="Smashing The Party">
     </a>
     <spam id="userName">@smashingtheparty</spam>
     <div class="social">
          <a href="https://instagram.com/smashingtheparty" target="_blank">
-            <i style="line-height: 38px;" class="fa fa-instagram circle"></i>
+            <i style="line-height: 38px; font-size: 1em;" class="fab fa-instagram circle"></i>
         </a>
         <a href="https://facebook.com/smashingtheparty" target="_blank">
-            <i style="line-height: 38px;" class="fa fa-facebook circle" aria-hidden="true"></i>
+            <i style="line-height: 38px; font-size: 1em;" class="fab fa-facebook circle" aria-hidden="true"></i>
+        </a>
+        <a href="https://twitter.com/smashtheparty" target="_blank">
+            <i style="line-height: 38px; font-size: 1em;" class="fab fa-twitter circle" aria-hidden="true"></i>
         </a>
         <a href="https://linkedin.com/company/smashingtheparty" target="_blank">
-            <i style="line-height: 38px;" class="fa fa-linkedin circle" aria-hidden="true"></i>
+            <i style="line-height: 38px; font-size: 1em;" class="fab fa-linkedin circle" aria-hidden="true"></i>
+        </a>
+        <a href="https://tiktok.com/@smashingtheparty" target="_blank">
+            <i style="line-height: 38px; font-size: 1em;" class="fab fa-tiktok circle" aria-hidden="true"></i>
         </a>
         <a href="https://api.whatsapp.com/send?text=I%20want%20to%20hear%20from%20you!%20Let%27s%20talk!&phone=7178628432"
         target="_blank"></a>
-            <i style="line-height: 38px;" class="fa fa-whatsapp circle" aria-hidden="true"></i>
+            <i style="line-height: 38px; font-size: 1em;" class="fab fa-whatsapp circle" aria-hidden="true"></i>
         </a> 
     </div>
     <div id="links">
@@ -40,15 +46,13 @@
                 class="fa fa-youtube"></i> YouTube</a>
     </div>
 
-    <div class="footer">
-        {{#get "posts" limit="10" as |more_posts|}}
-            {{#if more_posts}}
-                {{#foreach more_posts}}
-                    {{> "post-card"}}
-                {{/foreach}}
-            {{/if}}
-        {{/get}}
-    </div>
+    <!-- <div class="footer">
+        {{#get "posts" limit=10}}
+             {{#foreach posts}}
+                 {{> "grid-card"}}
+             {{/foreach}}
+         {{/get}}
+     </div>}} -->
 
     <!-- Javascript -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>

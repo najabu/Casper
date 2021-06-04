@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>{{@site.title}}</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" />
+    <script type="text/javascript" src="assets/js/script.js"></script>
+</head>
+
+<body>
+    <i onclick="toggle(this)" class="fa fa-moon-o fa-2x night_mode"></i>
+
+    <a href="http://smashingtheparty.com">
+        <img id="userPhoto" src="assets/images/fist-stp.png" alt="Smashing The Party">
+    </a>
+    <spam id="userName">@smashingtheparty</spam>
+    <div class="links-social">
+         <a href="https://instagram.com/smashingtheparty" target="_blank">
+            <i style="line-height: 38px;" class="fa fa-instagram circle"></i>
+        </a>
+        <a href="https://facebook.com/smashingtheparty" target="_blank">
+            <i style="line-height: 38px;" class="fa fa-facebook circle" aria-hidden="true"></i>
+        </a>
+        <a href="https://linkedin.com/company/smashingtheparty" target="_blank">
+            <i style="line-height: 38px;" class="fa fa-linkedin circle" aria-hidden="true"></i>
+        </a>
+        <a href="https://api.whatsapp.com/send?text=I%20want%20to%20hear%20from%20you!%20Let%27s%20talk!&phone=7178628432"
+        target="_blank"></a>
+            <i style="line-height: 38px;" class="fa fa-whatsapp circle" aria-hidden="true"></i>
+        </a> 
+    </div>
+    <div id="links-direct">
+        <a class="link" href="https://smashingtheparty.com/shop/" target="_blank" style="border-radius: 25px;"><i
+                class="fa fa-globe" aria-hidden="true"></i> Support</a>
+        <a class="link" href="https://youtube.com/channel/UC07hRqr3qRlBorqVu0yDi6Q" target="_blank" style="border-radius: 25px;"><i
+                class="fa fa-youtube"></i> YouTube</a>
+    </div>
+
+    <div class="footer">
+        {{#get "posts" filter="id:-{{id}}" include="authors" limit="3" as |more_posts|}}
+            {{#if more_posts}}
+                {{#foreach more_posts}}
+                    {{> "post-card"}}
+                {{/foreach}}
+            {{/if}}
+        {{/get}}
+    </div>
+
+    <!-- Javascript -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

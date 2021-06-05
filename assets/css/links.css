@@ -9,6 +9,21 @@ body {
     background-color: rgb(243, 242, 242);
 }
 
+#main_background_image {
+    background-image: linear-gradient(rgba(245, 246, 252, 0.52), rgba(55, 79, 169, 0.73)),
+    url('../images/link_background_image.png');
+    height: 300px;
+    width: 100%;
+    z-index: -1;
+    margin-top: 100%;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #userPhoto {
     width: auto;
     height: 100px;
@@ -36,11 +51,11 @@ body {
     margin: 27px auto;
 }
 .link:hover i {
-    color:#6D326D;
+    color:#374f9f;
 }
 .link {
     display: block;
-    background-color: #6D326D;
+    background-color: #374f9f;
     color: #fff;
     font-family: var(--font);
     text-align: center;
@@ -50,12 +65,12 @@ body {
     font-size: 1rem;
     font-weight: bold;
     transition: all .25s cubic-bezier(.08, .59, .29, .99);
-    border: solid #9f79be 2px;
+    border: solid #25366d 2px;
 }
 
 .link:hover {
     background-color: #fff;
-    color: #9f79be;
+    color: #374f9f;
     /* border: solid #9f79be 10px; */
 }
 

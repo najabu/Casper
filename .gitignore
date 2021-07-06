@@ -20,6 +20,8 @@ package-lock.json
 projectFilesBackup
 
 .DS_Store
+*/.DS_Store
+*/.DS_Store
 
 dist/
 
